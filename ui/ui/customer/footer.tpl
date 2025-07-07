@@ -11,8 +11,8 @@
     </footer>
 {else}
     <footer class="main-footer">
-        PHPNuxBill by <a href="https://github.com/hotspotbilling/phpnuxbill" rel="nofollow noreferrer noopener"
-            target="_blank">iBNuX</a>, Theme by <a href="https://adminlte.io/" rel="nofollow noreferrer noopener"
+            Glinta Africa Hotspot Billing System - Powered by <a href="https://github.com/watson-coder1/Glinta-Hotspot-Billing-System" rel="nofollow noreferrer noopener"
+        target="_blank">Glinta Africa</a> | Based on <a href="https://github.com/hotspotbilling/phpnuxbill" rel="nofollow noreferrer noopener" target="_blank">PHPNuxBill</a>, Theme by <a href="https://adminlte.io/" rel="nofollow noreferrer noopener"
             target="_blank">AdminLTE</a>
         <div class="pull-right">
             <a href="javascript:showPrivacy()">Privacy</a>

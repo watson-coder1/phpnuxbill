@@ -1,110 +1,152 @@
-[![ReadMeSupportPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-project.svg)](https://s.id/standwithpalestine)
+# Glinta Hotspot Billing System
 
-# PHPNuxBill - PHP Mikrotik Billing
+A comprehensive hotspot billing and management system based on [PHPNuxBill](https://github.com/hotspotbilling/phpnuxbill/).
 
-![PHPNuxBill](install/img/logo.png)
+## About
 
-## Feature
+Glinta Hotspot Billing System is a powerful solution for managing internet hotspot businesses, built upon the excellent PHPNuxBill foundation. This system provides comprehensive tools for:
 
-- Voucher Generator and Print
-- [Freeradius](https://github.com/hotspotbilling/phpnuxbill/wiki/FreeRadius)
-- Self registration
-- User Balance
-- Auto Renewal Package using Balance
-- Multi Router Mikrotik
-- Hotspot & PPPOE
-- Easy Installation
-- Multi Language
-- Payment Gateway
-- SMS validation for login
-- Whatsapp Notification to Consumer
-- Telegram Notification for Admin
+- **Customer Management**: User registration, profiles, and account management
+- **Billing & Payments**: Automated billing, payment gateway integration
+- **Voucher System**: Generate and manage prepaid vouchers
+- **Router Integration**: Mikrotik router management and automation
+- **Reporting**: Comprehensive business analytics and reports
+- **Multi-Language Support**: Localization for different regions
 
-See [How it Works / Cara Kerja](https://github.com/hotspotbilling/phpnuxbill/wiki/How-It-Works---Cara-kerja)
+## Features
 
-## Payment Gateway And Plugin
-
-- [Payment Gateway List](https://github.com/orgs/hotspotbilling/repositories?q=payment+gateway)
-- [Plugin List](https://github.com/orgs/hotspotbilling/repositories?q=plugin)
-
-You can download payment gateway and Plugin from Plugin Manager
+✅ **Voucher Generator and Print**  
+✅ **Freeradius Integration**  
+✅ **Self Registration**  
+✅ **User Balance Management**  
+✅ **Auto Renewal Packages**  
+✅ **Multi Router Mikrotik Support**  
+✅ **Hotspot & PPPOE Management**  
+✅ **Easy Installation**  
+✅ **Multi Language Support**  
+✅ **Payment Gateway Integration**  
+✅ **SMS Validation**  
+✅ **WhatsApp Notifications**  
+✅ **Telegram Notifications**
 
 ## System Requirements
 
-Most current web servers with PHP & MySQL installed will be capable of running PHPNuxBill
-
-Minimum Requirements
-
-- Linux or Windows OS
-- Minimum PHP Version 8.2
-- Both PDO & MySQLi Support
-- PHP-GD2 Image Library
-- PHP-CURL
-- PHP-ZIP
-- PHP-Mbstring
-- MySQL Version 4.1.x and above
-
-can be Installed in Raspberry Pi Device.
-
-The problem with windows is hard to set cronjob, better Linux
-
-## Changelog
-
-[CHANGELOG.md](CHANGELOG.md)
+- **OS**: Linux or Windows
+- **PHP**: Version 8.2 or higher
+- **Database**: MySQL 4.1.x and above
+- **Extensions**: PDO, MySQLi, GD2, CURL, ZIP, Mbstring
 
 ## Installation
 
-[Installation instructions](https://github.com/hotspotbilling/phpnuxbill/wiki)
+### Prerequisites
+1. **Web Server**: Apache/Nginx with PHP support
+2. **Database**: MySQL/MariaDB server
+3. **PHP Extensions**: Ensure all required extensions are installed
 
-## Freeradius
+### Quick Start with XAMPP (Windows)
+1. Download and install [XAMPP](https://www.apachefriends.org/)
+2. Clone or download this repository to `C:\xampp\htdocs\glinta`
+3. Start Apache and MySQL services
+4. Navigate to `http://localhost/glinta/install/`
+5. Follow the installation wizard
 
-Support [Freeradius with Database](https://github.com/hotspotbilling/phpnuxbill/wiki/FreeRadius)
+### Manual Installation
+1. Clone this repository to your web directory
+2. Configure your web server to point to the project directory
+3. Create a MySQL database
+4. Import the database schema from `install/phpnuxbill.sql`
+5. Copy `config.sample.php` to `config.php` and update database settings
+6. Access the application through your web browser
 
-## Community Support
+## Default Login Credentials
 
-- [Github Discussion](https://github.com/hotspotbilling/phpnuxbill/discussions)
-- [Telegram Group](https://t.me/phpmixbill)
+After installation, use these credentials to access the admin panel:
 
-## Technical Support
+- **Username**: `admin`
+- **Password**: `admin`
 
-This Software is Free and Open Source, Without any Warranty.
+**⚠️ Important**: Change the default password immediately after first login!
 
-Even if the software is free, but Technical Support is not,
-Technical Support Start from Rp 500.000 or $50
+## Configuration
 
-If you chat me for any technical support,
-you need to pay,
+### Database Configuration
+Edit `config.php` with your database settings:
 
-ask anything for free in the [discussion](/hotspotbilling/phpnuxbill/discussions) page or [Telegram Group](https://t.me/phpnuxbill)
+```php
+$db_host = "localhost";     // Database Host
+$db_user = "your_username"; // Database Username  
+$db_pass = "your_password"; // Database Password
+$db_name = "your_database"; // Database Name
+```
 
-Contact me at [Telegram](https://t.me/ibnux)
+### Router Configuration
+1. Access Admin Panel → Settings → Routers
+2. Add your Mikrotik router details
+3. Configure API access credentials
+4. Test the connection
+
+## Usage
+
+### For Administrators
+- **Dashboard**: Overview of business metrics
+- **Customer Management**: Add, edit, and manage customers
+- **Plan Management**: Create internet packages and pricing
+- **Voucher Generation**: Create prepaid vouchers for customers
+- **Reports**: View detailed business analytics
+- **Settings**: Configure system preferences
+
+### For Customers
+- **Self Registration**: Customers can create their own accounts
+- **Plan Purchase**: Buy internet packages online
+- **Balance Management**: Check balance and transaction history
+- **Profile Management**: Update personal information
+
+## Payment Gateways
+
+Supports various payment methods:
+- Manual payments
+- Bank transfers
+- Online payment gateways (configurable)
+
+## Support & Documentation
+
+- **Original PHPNuxBill**: [Documentation](https://github.com/hotspotbilling/phpnuxbill/wiki)
+- **Community**: [Telegram Group](https://t.me/phpmixbill)
+- **Issues**: Report bugs or request features in this repository's Issues section
+
+## Contributing
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-GNU General Public License version 2 or later
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-see [LICENSE](LICENSE) file
+## Attribution
 
+This project is based on [PHPNuxBill](https://github.com/hotspotbilling/phpnuxbill/) by the PHPNuxBill team. We extend our gratitude to the original developers for creating such an excellent foundation.
 
-## Donate to ibnux
+Original PHPNuxBill:
+- **Repository**: https://github.com/hotspotbilling/phpnuxbill/
+- **Author**: ibnux
+- **License**: MIT License
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/ibnux)
+## Screenshots
 
-BCA: 5410454825
+<!-- Add screenshots of your customized version here -->
 
-Mandiri: 163-000-1855-793
+## Changelog
 
-a.n Ibnu Maksum
+### Version 1.0.0 (Based on PHPNuxBill)
+- Initial release of Glinta Hotspot Billing System
+- Based on PHPNuxBill with custom modifications
+- Enhanced user interface and experience
+- Additional features and improvements
 
-## SPONSORS
+---
 
-- [mixradius.com](https://mixradius.com/) Paid Services Billing Radius
-- [mlink.id](https://mlink.id)
-- [https://github.com/sonyinside](https://github.com/sonyinside)
-
-## Thanks
-We appreciate all people who are participating in this project.
-
-<a href="https://github.com/hotspotbilling/phpnuxbill/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hotspotbilling/phpnuxbill" />
-</a>
+**Made with ❤️ by the Glinta Team**

@@ -54,23 +54,11 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">{Lang::T('Default Language')}</label>
                         <div class="col-md-6">
-                            <select class="form-control" name="lan" id="lan">
-                                {foreach $lani as $lanis}
-                                    <option value="{$lanis@key}" {if $_c['language'] eq $lanis@key} selected="selected"
-                                        {/if}>
-                                        {$lanis@key}
-                                    </option>
-                                {/foreach}
-                                <option disabled>_________</option>
-                                {foreach $lan as $lans}
-                                    <option value="{$lans@key}" {if $_c['language'] eq $lans@key} selected="selected" {/if}>
-                                        {$lans@key}
-                                    </option>
-                                {/foreach}
-                            </select>
+                            <input type="hidden" name="lan" value="english">
+                            <input type="text" class="form-control" value="English (Only Language Available)" readonly disabled>
                         </div>
                         <div class="col-md-4 help-block">
-                            <a href="{Text::url('')}settings/language">{Lang::T('Language Editor')}</a>
+                            Glinta Africa uses English only for simplified operations.
                         </div>
                     </div>
                     <div class="form-group">
